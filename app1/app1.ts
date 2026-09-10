@@ -6,7 +6,8 @@ console.log("lodash merge function:", merge) ; */
 console.log("zod function", z) */
 
 //=======================================
-import mongoose from "mongoose";
-console.log("mongoose funciton", mongoose)
+// import mongoose from "mongoose";
+// console.log("mongoose funciton", mongoose)
 
 //=======================================
+import type { user } from "../packages/types/index";

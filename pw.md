@@ -3,4 +3,7 @@
 > One Git repository → multiple related packages/apps → one dependency management system.
 
 1. Normally without **Workspace**, frontend and backend are completely separate pnpm projects.
-2. 
+2. Root dependency ≠ workspace dependency
+3. What you tested — app1/app2 using mongoose from root node_modules/ — is just Node.js module resolution walking up directories (app1/node_modules -> pw/node_modules). 
+    1. So now: 1 root project + 2 separate projects in subfolders, not 1 workspace.
+    
