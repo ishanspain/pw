@@ -10,4 +10,9 @@ console.log("zod function", z) */
 // console.log("mongoose funciton", mongoose)
 
 //=======================================
-import type { user } from "../packages/types/index";
+/* import { Logger } from "C:\\Users\\User\\Desktop\\et\\src\\logger.ts";
+Logger.logger("test logger") */
+
+//=======================================
+import { dateNow } from "../packages/utils/date";
+console.log("date returned", dateNow())
