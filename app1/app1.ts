@@ -15,4 +15,14 @@ Logger.logger("test logger") */
 
 //=======================================
 import { dateNow } from "../packages/utils/date";
-console.log("date returned", dateNow())
+import express from "express";
+
+const app = express()
+
+app.get("/", (req, res) => {
+    res.end(`app1 date: ${dateNow}`)
+})
+
+app.listen(3000, () => {
+    console.log("port running on ipv4 and ipv6 3000")
+})
