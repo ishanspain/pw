@@ -14,6 +14,9 @@
     1. So now: 1 root project + 2 separate projects in subfolders, not 1 workspace.
 
     <!-- ======================================= -->
+
+> pnpm workspaces manage packages and dependencies,
+
 ## Failer that will if we only use relative path: - 
 1. In relative path import, TypeScript/Node just walks the filesystem
 2. if we move the project, relative path will break the import
