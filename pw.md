@@ -17,9 +17,13 @@
 
 > pnpm workspaces manage packages and dependencies,
 
+### Use a workspace when you want app1, app2, and utils treated as independent but related `packages—with explicit dependencies, local package linking, one installation, one lockfile, filtering, and coordinated scripts.`
+
 ## Failer that will if we only use relative path: - 
 1. In relative path import, TypeScript/Node just walks the filesystem
 2. if we move the project, relative path will break the import
+3. Render’s UI says changes outside the configured app1 root directory may not trigger automatic deployments. (means anything changed in the shared packages will not trigger the deployment, on the project using that )
+4. 
 
 ## When import with package.json name: - 
 1. Even, If we move the project to any nest dir too, the import will still work

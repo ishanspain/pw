@@ -1,3 +1,3 @@
 export function dateNow() {
-    return Date.now();
+    return `current date ${Date.now()}`;
 }
