@@ -15,12 +15,13 @@ import { dateNow } from "../packages/utils/date.ts";
 import express from "express";
 
 const app = express()
+const port = Number(process.env.PORT) || 3100
 app.disable("x-powered-by")
 
 app.get("/", (req, res) => {
     res.end(`app2 date: ${dateNow}`)
 })
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log("port running on ipv4 and ipv6 3000")
 })
