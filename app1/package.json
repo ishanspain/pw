@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node app1.ts"
+    "start": "node app1.ts",
+     "dev": "tsx --watch app1.ts"
   },
   "keywords": [],
   "author": "",
