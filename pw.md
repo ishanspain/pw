@@ -96,5 +96,4 @@ Doubt: - 0.
 
 1. sperate lock file for each project
 2. sperate dependencies management (without pw)
-3. Install each project separately (without pw)
-5.
+3. 
