@@ -14,14 +14,14 @@ console.log("zod function", z) */
 Logger.logger("test logger") */
 
 //=======================================
-import { dateNow } from "../packages/utils/date";
+import { dateNow } from "../packages/utils/date.ts";
 import express from "express";
 
 const app = express()
 app.disable("x-powered-by")
 
 app.get("/", (req, res) => {
-    res.end(`app1 date: ${dateNow}`)
+    res.end(`app1 date: ${dateNow()}`)
 })
 
 app.listen(3000, () => {
