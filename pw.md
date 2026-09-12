@@ -67,19 +67,23 @@ Supports conditional exports too (import vs require, node vs browser, types):
 
 ### Use a workspace when you want app1, app2, and utils treated as independent but related `packages—with explicit dependencies, local package linking, one installation, one lockfile, filtering, and coordinated scripts.`
 
-## Failer that will if we only use relative path(harder import): -
+## [without pnpm worksace]v Failer that will if we only use relative path(harder import): -
 
 1. In relative path import, TypeScript/Node just walks the filesystem (so if we move the project, relative path will break the import)
 2. changes outside the configured app1 root directory may not trigger automatic deployments. (means anything changed in the shared packages will not trigger the deployment, even for the project using that data)
 3. we have to do cd, every time we want to run any cmd in specific project
 4. 
 
-## When import with package.json name(easier import): -
+## [with pnpm workspace] When import with package.json name(easier import): -
 
 1. Even, If we move the project to any nest dir too, the import will still work
 2. changes in the shared package will trigger the deployment for the projects consumeing it
 3. "pnpm --filter app1 dev" or "pnpm --filter "./apps/app1" dev" normally searches among the packages registered in the current pnpm workspace.
 4. 
+
+Extra advantage: - 
+1. pnpm -r run build: - pnpm discovers all of projects through pnpm-workspace.yaml, adn runs teh build cmd there
+2. 
 
 ---
 
@@ -93,5 +97,4 @@ Doubt: - 0.
 1. sperate lock file for each project
 2. sperate dependencies management (without pw)
 3. Install each project separately (without pw)
-4. No recursive/filter commands (without pw)
 5.
