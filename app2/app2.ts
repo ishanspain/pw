@@ -7,18 +7,18 @@ console.log("lodash merge function:", merge) ; */
 console.log("zod function", z) */
 
 //=======================================
-import mongoose from "mongoose";
-console.log("mongoose funciton", mongoose)
+/* import mongoose from "mongoose";
+console.log("mongoose funciton", mongoose) */
 
 //=======================================
-import { dateNow } from "../packages/utils/date";
+import { dateNow } from "../packages/utils/date.ts";
 import express from "express";
 
 const app = express()
 app.disable("x-powered-by")
 
 app.get("/", (req, res) => {
-    res.end(`app1 date: ${dateNow}`)
+    res.end(`app2 date: ${dateNow}`)
 })
 
 app.listen(3000, () => {
