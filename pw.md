@@ -83,7 +83,7 @@ Supports conditional exports too (import vs require, node vs browser, types):
 
 Extra advantage: - 
 1. pnpm -r run build: - pnpm discovers all of projects through pnpm-workspace.yaml, adn runs teh build cmd there
-2. install packages of all the projects sperately without pnpm, with pnpm 
+2. install packages of all the projects sperately without pnpm, with pnpm just **pnpm install**
 
 ---
 
@@ -92,8 +92,6 @@ Extra advantage: -
 1. A workspace manages dependency relationships and commands. It does not automatically provide building, watching, or hot reloading.
 
 ===================================================
-Doubt: - 0. 
-
-1. sperate lock file for each project
-2. sperate dependencies management (without pw)
+DOUBT: - 
+1. sperate lock file for each project (Separate dependency management” means that without a pnpm workspace, each project independently manages its dependencies and lockfile.)
 3. 
