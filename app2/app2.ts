@@ -12,9 +12,9 @@ console.log("mongoose funciton", mongoose) */
 
 //=======================================
 import { dateNow } from "../packages/utils/date.ts";
-// import express from "express";
+import express from "express";
 // import express from "C:\\Users\\User\\Desktop\\pc-server";
-import express from "../../pc-server/";
+// import express from "../../pc-server/";
 
 const app = express()
 const port = Number(process.env.PORT) || 3100
