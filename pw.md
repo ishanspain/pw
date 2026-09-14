@@ -100,8 +100,6 @@ a) relative dir import:  - ERR_UNSUPPORTED_DIR_IMPORT
 
 > When we move write the dependencies, in package.json and workspace.ymal, the import will not work, because obviously in nodejs, the packages has to be in node_module, so thatswhy `pnpm install` will symlink that package in the respective project node_modules
 
-a) pnpm add -w "@pw/types@workspace:*"
-b) 
 
 1. Even, If we move the project to any nest dir too, the import will still work
 2. changes in the shared package will trigger the deployment for the projects consumeing it
@@ -113,16 +111,18 @@ Extra advantage: -
 2. install packages of all the projects sperately without pnpm, with pnpm just **pnpm install**
 
 Extra information: - 
-1. Technically you can link @pw/types at the workspace root: pnpm add -w "@pw/types@workspace:*" // this will work for the project within these root dir
-2. even if it is a shared package inside your packages/ directory, the consuming project should still declare it as a dependency. all project should describe whatever they are using because it will give the clear understanding of the projects dependencies (This is actually one of the main advantages of a monorepo: the relationships between your projects are explicit and easy to manage.)
-3. 
+1. Technically you can link @pw/types at the workspace root: pnpm add -w "@pw/types@workspace:*" // this will work for the project within these root dir BUT this is okay untill all the projects need it, what if two project needs it and other does not, so this case the project who does not need it can also import(leading to phatom dependency), AND THIS is the actual main advantage of PNPM symlinking the shared package from its global store in only the projects that needs it, ELSE incase of NPM, [1. Local workspace-to-workspace deps → symlinked] and [2. External deps (from npm registry) → hoisted, not symlinked] this leads to phantom dependencies
+a) even if it is a shared package inside your packages/ directory, the consuming project should still declare it as a dependency in package.json. all project should describe whatever they are using because it will give the clear understanding of the projects dependencies (This is actually one of the main advantages of a monorepo: the relationships between your projects are explicit and easy to manage.)
+b)In case of npm, declaring the dependencies in packages.json is even very important because of phantom dependency, we have to be very clear which is project is using which dependencies, so that we are not accidentailly importing the data from the package hoisted at the root node_module (Every package should declare every module it directly require/imports — regardless of where npm physically stores the files in projects node_module)
+{The root package-lock.json records the exact resolved tree for the entire monorepo — every package, every version, and precisely where each one physically lives (hoisted at root vs. nested). It's generated once (or updated) whenever someone runs npm install, and then committed to git.}
+c) incase of pnpm, the registry installed packages are actually linked in the respective project node_modules
 
 -------------------------------
 
 ## What is use of mono-repo framework, if we have pnpm workspace:-
 
 1. A workspace manages dependency relationships and commands. It does not automatically provide building, watching, or hot reloading.
-
+2. If types hasn't changed, Turbo can reuse its cached build instead of rebuilding everything.
 ===================================================
 DOUBT: - 
 1. sperate lock file for each project (Separate dependency management” means that without a pnpm workspace, each project independently manages its dependencies and lockfile.)
@@ -130,6 +130,3 @@ DOUBT: -
 
 
 =================================================
-# MONO-repo framework usages: - 
-1. If types hasn't changed, Turbo can reuse its cached build instead of rebuilding everything.
-2. 
