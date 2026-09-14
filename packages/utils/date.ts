@@ -1,3 +1,3 @@
 export function dateNow() {
-    return `current date ${Date.now()}`;
+    return `time on 9:51 ${Date.now()}`;
 }

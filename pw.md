@@ -60,8 +60,8 @@ Supports conditional exports too (import vs require, node vs browser, types):
 3. What you tested — app1/app2 using mongoose from root node_modules/ — is just Node.js module resolution walking up directories (app1/node_modules -> pw/node_modules).
    1. So now: 1 root project + 2 separate projects in subfolders, not 1 workspace.
 
-===============================================================
-===============================================================
+===================================================
+===================================================
 
 > pnpm workspaces manage packages and dependencies,
 
@@ -71,21 +71,21 @@ Supports conditional exports too (import vs require, node vs browser, types):
 
 1. In relative path import, TypeScript/Node just walks the filesystem (so if we move the project, relative path will break the import)
 2. changes outside the configured app1 root directory may not trigger automatic deployments. (means anything changed in the shared packages will not trigger the deployment, even for the project using that data)
-3. we have to do cd, every time we want to run any cmd in specific project
+3. we have to do cd, every time we want to run any cmd in specific project (like for strarting project, )
 4. 
 
 ## [with pnpm workspace] When import with package.json name(easier import): -
 
 1. Even, If we move the project to any nest dir too, the import will still work
 2. changes in the shared package will trigger the deployment for the projects consumeing it
-3. "pnpm --filter app1 dev" or "pnpm --filter "./apps/app1" dev" normally searches among the packages registered in the current pnpm workspace.
+3. "pnpm --filter app1 dev" or "pnpm --filter "./apps/app1" dev" normally searches among the packages registered in the current pnpm workspace. "pnpm -r run build/dev" start all project togather, 
 4. 
 
 Extra advantage: - 
-1. pnpm -r run build: - pnpm discovers all of projects through pnpm-workspace.yaml, adn runs teh build cmd there
+1. [DONE] pnpm -r run build: - pnpm discovers all of projects through pnpm-workspace.yaml, adn runs teh build cmd there
 2. install packages of all the projects sperately without pnpm, with pnpm just **pnpm install**
 
----
+-------------------------------
 
 ## What is use of mono-repo framework, if we have pnpm workspace:-
 
@@ -94,4 +94,4 @@ Extra advantage: -
 ===================================================
 DOUBT: - 
 1. sperate lock file for each project (Separate dependency management” means that without a pnpm workspace, each project independently manages its dependencies and lockfile.)
-3. 
+2. 
