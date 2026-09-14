@@ -57,8 +57,19 @@ Supports conditional exports too (import vs require, node vs browser, types):
 ## Typescript import resolution: - 
 > The import suggestion does not prove the package is runnable.
 
-## Node import resolution: - 
+1. In case of the both absolute and relative path import, typescript is checking for  "main": "dist/app.js" because it is a directory path, so ts will join the main property path from packages.json of the given absolute path , and find the package from that file
+2. 
 
+## tsx import resolution: - 
+1. In case of the absolute path import: - Not allowed ('ERR_UNSUPPORTED_ESM_URL_SCHEME')
+2. In case of relative path import, Node ESM(tsx) does not reliably resolve it through package.json.main; tsx tries/joins index.ts.
+
+## Node import resolution: - 
+1. In case of the absolute path import: - Not allowed ('ERR_UNSUPPORTED_ESM_URL_SCHEME')
+2. In case of relative path import: - 
+a) relative dir import:  - ERR_UNSUPPORTED_DIR_IMPORT
+
+3. 
 ====================================
 
 > One Git repository → multiple related packages/apps → one dependency management system.
