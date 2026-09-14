@@ -1,5 +1,7 @@
 # pnpm workSpace
 
+> The import suggestion does not prove the package is runnable.
+
 ## Import resulotion: -
 
 > imports — It's used for internal remapping within your own package — you define aliases (always prefixed with #) that map to real files, and only your own package's code can use them.
@@ -51,6 +53,12 @@ Supports conditional exports too (import vs require, node vs browser, types):
 
 ```
 
+--------------------------------------
+## Typescript import resolution: - 
+> The import suggestion does not prove the package is runnable.
+
+## Node import resolution: - 
+
 ====================================
 
 > One Git repository → multiple related packages/apps → one dependency management system.
@@ -94,4 +102,10 @@ Extra advantage: -
 ===================================================
 DOUBT: - 
 1. sperate lock file for each project (Separate dependency management” means that without a pnpm workspace, each project independently manages its dependencies and lockfile.)
+2. 
+
+
+=================================================
+# MONO-repo framework: - 
+1. If types hasn't changed, Turbo can reuse its cached build instead of rebuilding everything.
 2. 
