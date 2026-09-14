@@ -37,6 +37,8 @@ Modern: -
     "./throttle": "./dist/throttle.js"
   }
 }
+a) Package subpaths must start with "./"
+b) without "./" only allowed: - import, require, and default
 
 
 ---------------------
@@ -50,6 +52,7 @@ Supports conditional exports too (import vs require, node vs browser, types):
       }
     }
   }
+a) without "./" only allowed: - import, require, and default
 
 ```
 
