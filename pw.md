@@ -95,6 +95,8 @@ a) relative dir import:  - ERR_UNSUPPORTED_DIR_IMPORT
 
 ## [with pnpm workspace] When import with package.json name(easier import): -
 
+> When we move write the dependencies, in package.json and workspace.ymal, pnpm will symlink that package in the respective project node_modules
+
 1. Even, If we move the project to any nest dir too, the import will still work
 2. changes in the shared package will trigger the deployment for the projects consumeing it
 3. "pnpm --filter app1 dev" or "pnpm --filter "./apps/app1" dev" normally searches among the packages registered in the current pnpm workspace. "pnpm -r run build/dev" start all project togather, 
@@ -117,6 +119,6 @@ DOUBT: -
 
 
 =================================================
-# MONO-repo framework: - 
+# MONO-repo framework usages: - 
 1. If types hasn't changed, Turbo can reuse its cached build instead of rebuilding everything.
 2. 

@@ -11,7 +11,8 @@ console.log("zod function", z) */
 console.log("mongoose funciton", mongoose) */
 
 //=======================================
-import { dateNow } from "../packages/utils/date.ts";
+// import { dateNow } from "../packages/utils/date.ts";
+import { dateNow } from "@pw/utils";
 import express from "express";
 // import express from "C:\\Users\\User\\Desktop\\pc-server";
 // import express from "../../pc-server/";

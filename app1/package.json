@@ -12,6 +12,7 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
+     "@pw/utils": "workspace:*",
     "lodash": "^4.18.1"
   },
   "devDependencies": {

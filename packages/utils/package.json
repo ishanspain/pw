@@ -1,0 +1,4 @@
+{
+    "name": "@pw/utils",
+    "main": "./date.ts"
+}

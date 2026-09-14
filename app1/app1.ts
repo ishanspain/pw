@@ -14,7 +14,8 @@ console.log("zod function", z) */
 Logger.logger("test logger") */
 
 //=======================================
-import { dateNow } from "../packages/utils/date.ts";
+// import { dateNow } from "../packages/utils/date.ts";
+import { dateNow } from "@pw/utils";
 import express from "express";
 
 const app = express()
