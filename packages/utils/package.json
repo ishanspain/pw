@@ -1,5 +1,9 @@
 {
     "name": "@pw/utils",
     "type": "module",
-    "main": "./index.ts"
+    "exports": {
+    ".": "./indexs.ts",
+    "./date": "./date.ts",
+    "./logger": "./logger.ts"
+  }
 }
