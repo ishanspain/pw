@@ -98,7 +98,10 @@ a) relative dir import:  - ERR_UNSUPPORTED_DIR_IMPORT
 
 ## [with pnpm workspace] When import with package.json name(easier import): -
 
-> When we move write the dependencies, in package.json and workspace.ymal, pnpm will symlink that package in the respective project node_modules
+> When we move write the dependencies, in package.json and workspace.ymal, the import will not work, because obviously in nodejs, the packages has to be in node_module, so thatswhy `pnpm install` will symlink that package in the respective project node_modules
+
+a) pnpm add -w "@pw/types@workspace:*"
+b) 
 
 1. Even, If we move the project to any nest dir too, the import will still work
 2. changes in the shared package will trigger the deployment for the projects consumeing it
@@ -108,6 +111,11 @@ a) relative dir import:  - ERR_UNSUPPORTED_DIR_IMPORT
 Extra advantage: - 
 1. [DONE] pnpm -r run build: - pnpm discovers all of projects through pnpm-workspace.yaml, adn runs teh build cmd there
 2. install packages of all the projects sperately without pnpm, with pnpm just **pnpm install**
+
+Extra information: - 
+1. Technically you can link @pw/types at the workspace root: pnpm add -w "@pw/types@workspace:*" // this will work for the project within these root dir
+2. even if it is a shared package inside your packages/ directory, the consuming project should still declare it as a dependency. all project should describe whatever they are using because it will give the clear understanding of the projects dependencies (This is actually one of the main advantages of a monorepo: the relationships between your projects are explicit and easy to manage.)
+3. 
 
 -------------------------------
 

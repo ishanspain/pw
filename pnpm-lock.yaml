@@ -109,6 +109,9 @@ importers:
 
   .:
     dependencies:
+      '@pw/types':
+        specifier: workspace:*
+        version: link:packages/types
       express:
         specifier: ^5.2.1
         version: 5.2.1
@@ -128,6 +131,8 @@ importers:
       '@types/lodash':
         specifier: ^4.17.25
         version: 4.17.25
+
+  packages/types: {}
 
   packages/utils: {}
 
