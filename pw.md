@@ -121,8 +121,13 @@ c) incase of pnpm, the registry installed packages are actually linked in the re
 
 ## What is use of mono-repo framework, if we have pnpm workspace:-
 
-1. A workspace manages dependency relationships and commands. It does not automatically provide building, watching, or hot reloading.
-2. If types hasn't changed, Turbo can reuse its cached build instead of rebuilding everything.
+> A workspace manages dependency relationships and commands. It does not automatically provide building, watching, or hot reloading.
+0. automatic workspace setup of any respective project
+a) automatic dependencies adding
+1. No smart caching(build/test only the files changed): - If types hasn't changed, Turbo can reuse its cached build instead of rebuilding everything.
+2. No dependency-aware task ordering
+3. Task pipelines / dependency graphs between tasks, not just packages: - 
+
 ===================================================
 DOUBT: - 
 1. sperate lock file for each project (Separate dependency management” means that without a pnpm workspace, each project independently manages its dependencies and lockfile.)
