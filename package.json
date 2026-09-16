@@ -19,7 +19,6 @@
   "packageManager": "pnpm@12.3.4",
   "type": "module",
   "dependencies": {
-      "@pw/types":  "workspace:*",
     "express": "^5.2.1",
     "mongoose": "^9.9.5"
   }
