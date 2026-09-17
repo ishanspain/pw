@@ -139,6 +139,7 @@ c) incase of pnpm, the registry installed packages are actually linked in the re
 > A workspace manages dependency relationships and commands. It does not automatically provide building, watching, or hot reloading.
 0. automatic workspace setup of any respective project
 a) automatic dependencies adding
+b) for every changes we have to run build cmd, or start two sperate build watch process(one for package change other one for project startup)
 1. No smart caching(build/test only the files changed): - If types hasn't changed, Turbo can reuse its cached build instead of rebuilding everything.
 2. No dependency-aware task ordering
 3. Task pipelines / dependency graphs between tasks, not just packages: - 

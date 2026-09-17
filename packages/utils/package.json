@@ -1,12 +1,13 @@
 {
-    "name": "@pw/utils",
-    "type": "module",
-    "exports": {
-      ".": "./dist/indexs.js",
-      "./date": "./dist/date.js",
-      "./logger": "./dist/logger.js"
-    },
-    "scripts": {
-      "build": "tsc"
-    }
+  "name": "@pw/utils",
+  "type": "module",
+  "exports": {
+    ".": "./dist/indexs.js",
+    "./date": "./dist/date.js",
+    "./logger": "./dist/logger.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  }
 }

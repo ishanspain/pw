@@ -1,3 +1,3 @@
 export function numReturner(){
-    return Math.random()
+    return `random num changed on 10:37 ${Math.random()}`
 }

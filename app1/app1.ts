@@ -20,7 +20,7 @@ import { Logger } from "@pw/utils";
 import { numReturner } from "@pw/utils";
 import express from "express";
 
-Logger.log("log from logger", numReturner)
+Logger.log("log from logger", numReturner())
 
 const app = express()
 app.disable("x-powered-by")
