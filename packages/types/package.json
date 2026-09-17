@@ -1,4 +1,7 @@
 {
-    "name": "@pw/types",
-    "types": "./index.ts"
+  "name": "@pw/types",
+  "types": "./dist/index.ts",
+  "scripts": {
+    "build": "tsc"
+  }
 }
