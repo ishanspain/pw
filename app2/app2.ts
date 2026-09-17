@@ -25,7 +25,8 @@ app.disable("x-powered-by");
 const data: user = {
   name:  "test",
   age: 90,
-  email: "test@t.com"
+  email: "test@t.com",
+  phone: 1
 }
 
 app.get("/", (req, res) => {

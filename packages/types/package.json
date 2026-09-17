@@ -1,6 +1,6 @@
 {
   "name": "@pw/types",
-  "types": "./dist/index.ts",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsc"
   }
