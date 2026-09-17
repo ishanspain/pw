@@ -17,9 +17,10 @@ Logger.logger("test logger") */
 // import { dateNow } from "../packages/utils/date.ts";
 import { dateNow } from "@pw/utils";
 import { Logger } from "@pw/utils";
+import { numReturner } from "@pw/utils";
 import express from "express";
 
-Logger.log("log from logger")
+Logger.log("log from logger", numReturner)
 
 const app = express()
 app.disable("x-powered-by")
