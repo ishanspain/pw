@@ -37,6 +37,21 @@ Modern: -
     "./throttle": "./dist/throttle.js"
   }
 }
+
+ "exports": {
+    ".": {
+      "types": "./dist/indexs.d.ts",
+      "import": "./dist/indexs.js"
+    },
+     "./logger": {
+      "types": "./dist/logger.d.ts",
+      "import": "./dist/logger.js"
+    },
+    "./date": {
+      "types": "./dist/date.d.ts",
+      "import": "./dist/date.js"
+    },
+ }
 a) Package subpaths must start with "./"
 b) without "./" only allowed: - import, require, and default
 
@@ -135,3 +150,7 @@ DOUBT: -
 
 
 =================================================
+# Production Build: - 
+1. Each package (utils, types, app1, app2) gets its own dist/ folder.
+2. 
+3. Build order matters — root script
