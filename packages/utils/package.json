@@ -2,9 +2,9 @@
     "name": "@pw/utils",
     "type": "module",
     "exports": {
-      ".": "./indexs.ts",
-      "./date": "./date.ts",
-      "./logger": "./logger.ts"
+      ".": "./dist/indexs.js",
+      "./date": "./dist/date.js",
+      "./logger": "./dist/logger.js"
     },
     "scripts": {
       "build": "tsc"
