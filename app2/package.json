@@ -12,6 +12,7 @@
   "type": "module",
   "dependencies": {
     "@pw/types":  "workspace:*",
+    "@pw/utils":  "workspace:*",
     "zod": "^4.5.4"
   }
 }

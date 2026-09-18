@@ -138,6 +138,9 @@ importers:
       '@pw/types':
         specifier: workspace:*
         version: link:../packages/types
+      '@pw/utils':
+        specifier: workspace:*
+        version: link:../packages/utils
       zod:
         specifier: ^4.5.4
         version: 4.6.5
