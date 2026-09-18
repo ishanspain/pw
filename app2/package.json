@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node app2.ts"
+    "dev": "tsx ./app2.ts",
+    "start": "node ./dist/app2.js",
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",

@@ -118,7 +118,8 @@ a) relative dir import:  - ERR_UNSUPPORTED_DIR_IMPORT
 
 1. Even, If we move the project to any nest dir too, the import will still work
 2. changes in the shared package will trigger the deployment for the projects consumeing it
-3. "pnpm --filter app1 dev" or "pnpm --filter "./apps/app1" dev" normally searches among the packages registered in the current pnpm workspace. "pnpm -r run build/dev" start all project togather, 
+3. "pnpm --filter app1 dev" or "pnpm --filter "./apps/app1" dev" normally searches among the packages registered in the current pnpm workspace.
+a) "pnpm -r run build/dev" : - this cmd start/build all project togather after searching recursively in workspace mentioned packages/projects, 
 4. 
 
 Extra advantage: - 
