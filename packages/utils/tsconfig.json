@@ -1,12 +1,11 @@
-// packages/utils/tsconfig.json
 {
-//   "extends": "../../tsconfig.base.json",
+  "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "rootDir": ".",
     "outDir": "dist",
     "declaration": true,
     "declarationMap": true,
-    "rewriteRelativeImportExtensions": true
+    "types": ["node"],
   },
   "include": ["*.ts"],
   "exclude": ["dist"]

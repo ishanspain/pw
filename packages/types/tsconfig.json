@@ -1,6 +1,5 @@
-// packages/utils/tsconfig.json
 {
-  // "extends": "../../tsconfig.base.json",
+  "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "rootDir": ".",
     "outDir": "dist",

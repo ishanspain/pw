@@ -1,4 +1,4 @@
-const env = "dev";
+const env = process.env.NODE_ENV
 
 export class Logger {
   private constructor() {}

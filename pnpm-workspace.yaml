@@ -2,3 +2,6 @@ packages:
   - "app1"
   - "app2"
   - "packages/*"
+
+allowBuilds:
+  esbuild: true
