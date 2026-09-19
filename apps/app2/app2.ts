@@ -34,5 +34,5 @@ app.get("/", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log("port running on ipv4 and ipv6 3000");
+  console.log(`port running on ipv4 and ipv6 ${port}`);
 });
