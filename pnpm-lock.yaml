@@ -129,19 +129,6 @@ importers:
         specifier: ^7.0.2
         version: 7.0.2
 
-  app1:
-    dependencies:
-      '@pw/utils':
-        specifier: workspace:*
-        version: link:../packages/utils
-      lodash:
-        specifier: ^4.18.1
-        version: 4.18.1
-    devDependencies:
-      '@types/lodash':
-        specifier: ^4.17.25
-        version: 4.17.25
-
   app2:
     dependencies:
       '@pw/types':
@@ -153,6 +140,19 @@ importers:
       zod:
         specifier: ^4.5.4
         version: 4.6.5
+
+  apps/app1:
+    dependencies:
+      '@pw/utils':
+        specifier: workspace:*
+        version: link:../../packages/utils
+      lodash:
+        specifier: ^4.18.1
+        version: 4.18.1
+    devDependencies:
+      '@types/lodash':
+        specifier: ^4.17.25
+        version: 4.17.25
 
   packages/types: {}
 
